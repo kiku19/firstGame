@@ -17,4 +17,15 @@ public abstract class  GameObject {
 
     protected abstract void update();
 
+    protected double getPositionX(){
+            return positionX;
+    }
+
+    protected double getPositionY(){
+        return positionY;
+    }
+
+    protected double getDistanceBetween(GameObject ob1,GameObject ob2){
+        return Math.sqrt(Math.pow(ob1.getPositionX() - ob2.getPositionX(),2)+Math.pow(ob1.getPositionY()-ob2.getPositionY(),2));
+    }
 }
